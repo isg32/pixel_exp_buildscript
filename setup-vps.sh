@@ -2,7 +2,7 @@
 
 echo " "
 echo "Have a Coffee until this Sets-up the env. "
-echo "--------------------------------------------"
+echo "_____________________________________________"
 
 
 PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." >/dev/null && pwd )"
