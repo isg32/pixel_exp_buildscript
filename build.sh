@@ -2,14 +2,6 @@
 
 path= pwd #or just add pwd here
 
-
-L1()
-{
-	git config --global user.email "sapangajjar101105@gmail.com"
-	git config --global user.name "isg32"
-	
-} 
-
 L2()
 {
     cd $path
@@ -22,7 +14,7 @@ L2()
 L3()
 {
     cd $path
-    git clone https://github.com/fuyukihidekii/android_device_motorola_sm6150-common -b lineage-20 keys
+    git clone https://github.com/fuyukihidekii/android_device_motorola_hanoip -b lineage-dev 
     mkdir pe
     cd pe
     echo -ne '\n' | repo init -u https://github.com/PixelExperience/manifest -b thirteen-plus --git-lfs --depth=1
@@ -38,7 +30,7 @@ L3()
 L4()
 {
     cd $path/pe
-    git clone https://github.com/fuyukihidekii/android_device_motorola_sm6150-common -b lineage-20 --depth=1 device/motorola/hanoip
+    git clone https://github.com/fuyukihidekii/android_device_motorola_hanoip -b lineage-dev --depth=1 device/motorola/hanoip
     git clone https://github.com/fuyukihidekii/proprietary_vendor_motorola -b lineage-20 --depth=1 vendor/motorola/hanoip
     git clone https://github.com/fuyukihidekii/android_kernel_motorola_sm6150 -b lineage-20 --depth=1 kernel/motorola/sm6150
     . build/envsetup.sh && lunch aosp_hanoip-userdebug && make -j$(nproc --all) target-files-package otatools
@@ -56,7 +48,7 @@ L4()
 echo "____________________________________________________"
 echo "Initialising setup.."
 echo "____________________________________________________"
-L1
+sleep 3
 echo "____________________________________________________"
 echo "Setting up repo launcher.."
 echo "____________________________________________________"
